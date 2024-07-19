@@ -1,0 +1,21 @@
+services:
+  postgres_db:
+    image: postgres:14.10
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: trackbee
+    volumes:
+      - ./docker/data/postgres:/var/lib/postgresql/data
+      - ./db-init-scripts:/docker-entrypoint-initdb.d
+
+  test_api:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres_db

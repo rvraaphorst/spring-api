@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: trackbee-test-api
+  # Spring datasource
+  datasource:
+    url: jdbc:postgresql://postgres_db:5432/trackbee?currentSchema=public
+    username: "postgres"
+    password: "admin"
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      leak-detection-threshold: 300000
+      minimum-idle: 10
+      maximum-pool-size: 30
+    tomcat:
+      test-while-idle: true
+      validation-query: SELECT 1
