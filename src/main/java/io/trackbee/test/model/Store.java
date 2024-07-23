@@ -31,7 +31,6 @@ public class Store {
 		this.name = name;
 	}
 
-
 	public String getApiKey() {
 		return apiKey;
 	}
@@ -39,4 +38,6 @@ public class Store {
 	public void setApiKey(String apiKey) {
 		this.apiKey = apiKey;
 	}
+
+	// TODO: Map ONE-TO-MANY to StorePlatformConnection
 }

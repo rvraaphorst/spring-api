@@ -17,9 +17,15 @@ public class StoreTest {
 	private StoreService service;
 
 	@Test
-	public void testGetId() {
+	public void testGetById() {
 		Store store = service.getById(1L);
 		assertThat(store.getApiKey()).isEqualTo("1-AB");
+	}
+
+	@Test
+	public void testGetByApiKey() {
+		Store store = service.getByApiKey("3-EF");
+		assertThat(store.getId()).isEqualTo(3L);
 	}
 
 	@Test

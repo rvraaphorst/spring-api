@@ -21,6 +21,8 @@ public class StoreService {
 		return storeService.findById(id).orElse(null);
 	}
 
+	public Store getByApiKey(String apiKey) { return storeService.findByapiKey(apiKey);}
+
 	public Store create(Store store) {
 		return storeService.save(store);
 	}

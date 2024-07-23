@@ -28,3 +28,10 @@ CREATE TABLE "connection_credentials" (
 ALTER TABLE ONLY "connection_credentials"
 	ADD CONSTRAINT "fk_connection_credentials_store_platform_connection" FOREIGN KEY ("store_platform_connection_id") REFERENCES "store_platform_connection"(id);
 
+
+CREATE TABLE "order" (
+	id         	BIGSERIAL PRIMARY KEY,
+	given_id   	CHARACTER VARYING(20) NOT NULL,
+	price    	NUMERIC(10,2) NOT NULL,
+	timestamp 	TIMESTAMPTZ NOT NULL DEFAULT now()
+);
