@@ -1,5 +1,6 @@
-package io.trackbee.test.model;
+package io.trackbee.test.repository;
 
+import io.trackbee.test.model.Store;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

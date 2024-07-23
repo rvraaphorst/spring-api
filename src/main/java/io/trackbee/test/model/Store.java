@@ -2,24 +2,24 @@ package io.trackbee.test.model;
 
 import jakarta.persistence.*;
 
+
 @Entity
 @Table(name = "store")
 public class Store {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	private Long id;
 
 	private String name;
 
 	private String apiKey;
 
-
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -30,6 +30,7 @@ public class Store {
 	public void setName(String name) {
 		this.name = name;
 	}
+
 
 	public String getApiKey() {
 		return apiKey;

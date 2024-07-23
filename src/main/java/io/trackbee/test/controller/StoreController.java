@@ -1,5 +1,7 @@
-package io.trackbee.test.model;
+package io.trackbee.test.controller;
 
+import io.trackbee.test.model.Store;
+import io.trackbee.test.service.StoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
